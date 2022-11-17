@@ -1,7 +1,7 @@
-package com.devjoaovidal.reactspringapp.controller;
+package com.devjoaovidal.backend.controller;
 
-import com.devjoaovidal.reactspringapp.model.User;
-import com.devjoaovidal.reactspringapp.repository.UserRepository;
+import com.devjoaovidal.backend.model.User;
+import com.devjoaovidal.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,13 +17,14 @@ public class UserController {
     private UserRepository userRepository;
 
     @PostMapping(value = "/user")
-    User newUser(@RequestBody User newUser) {
-        return userRepository.save(newUser);
+    User newUser(@RequestBody User user) {
+        return userRepository.save(user);
     }
 
-    @GetMapping(value ="/users")
+    @GetMapping(value = "/users")
     List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
 
 }

@@ -1,4 +1,4 @@
-package com.devjoaovidal.reactspringapp.model;
+package com.devjoaovidal.backend.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
